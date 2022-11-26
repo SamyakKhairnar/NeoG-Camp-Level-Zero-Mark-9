@@ -3,12 +3,12 @@ import './App.css';
 
 const restaurantList ={
   "Mumbai":[{
-    "name" : "Tanatan Juhu - Kitchen & Bar",
+    "name" : "Tanatan Kitchen & Bar",
     "adress": "462, A.B. Nair Rd, Juhu, opposite Novotel, Mumbai, Maharashtra 400049",
     "ratings": "4.5",
     "image":"https://iili.io/HFmHbwl.md.jpg"
   },{
-    "name" : "Masala Library by Jiggs Kalra",
+    "name" : "Masala Library",
     "adress": "Bandra Kurla Complex Rd, G Block BKC, Bandra Kurla Complex, Bandra East, Mumbai, Maharashtra 400051",
     "ratings": "4.3",
     "image":"https://iili.io/HFmHt9f.md.jpg"
@@ -29,7 +29,7 @@ const restaurantList ={
     "ratings": "4.8",
     "image":"https://iili.io/HFmHsFn.md.jpg"
   },{
-    "name" : "ShakesBierre - Brewpub & Kitchen",
+    "name" : "ShakesBierre Brewpub",
     "adress": "Eva Mall, Level 5, Brigade Rd, Bengaluru, Karnataka 560001",
     "ratings": "4.6",
     "image":"https://iili.io/HFmH4nI.md.jpg"
@@ -50,7 +50,7 @@ const restaurantList ={
     "ratings": "4.8",
     "image":"https://iili.io/HFmHUjp.md.jpg"
   },{
-    "name" : "The Sassy Spoon Pune",
+    "name" : "The Sassy Spoon",
     "adress": "Sanskriti Lifestyle, Lane No. 7, Ashok Chakra Society, Meera Nagar, Koregaon Park, Pune, Maharashtra 411001",
     "ratings": "4.8",
     "image":"https://iili.io/HFmHk8J.md.jpg"
@@ -81,7 +81,7 @@ const restaurantList ={
     "ratings": "4.6",
     "image":"https://iili.io/HFmHO3g.md.jpg"
   },{
-    "name" : "Parikrama The Revolving Restaurant",
+    "name" : "Parikrama Restaurant",
     "adress": "Antriksh Bhavan, 22, KG Marg, Barakhamba, New Delhi, Delhi 110001",
     "ratings": "4.5",
     "image":"https://iili.io/HFmHjG1.md.jpg"
@@ -101,27 +101,27 @@ function App() {
     <div className="App">
       <div className="header">
         <h1>Best Restaurant in India</h1>
-        <h3>An React Application</h3>
-        <div>
-          <ul className='inline-item'>
-            <li className="list">Mumbai</li>
-            <li className="list">Bangalore</li>
-            <li className="list">Pune</li>
-            <li className="list">Delhi</li>
-          </ul>
+        <h3>"An React Application"</h3>
+        <div className="inline-item">
+          {cityList.map((city)=>{
+            return <button className="list" onClick={()=>cityHandler(city)}>{city}</button>
+          })}
         </div>
       </div>
       <div className="container">
-        <div className="grid">
-
-        </div>
-
-        
-
+        {restaurantList[city].map((item) => {
+          return (
+            <li className="card" key={item}>
+              <img className="cardImage" alt="Restaurant" src={item.image} />
+              <div className="lists">
+                <h2>{item.name}</h2>
+                <p>Rating - {item.ratings}</p>
+                <p className="adress-p">{item.adress}</p>
+              </div>
+            </li>
+          );
+        })} 
       </div>
-
-
-
     </div>
   );
 }
