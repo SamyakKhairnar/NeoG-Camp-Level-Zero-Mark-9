@@ -99,10 +99,26 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Best Restaurant in India</h1>
-      <h3>An React Application</h3>
-      
-      <div ></div>
+      <div className="header">
+        <h1>Best Restaurant in India</h1>
+        <h3>An React Application</h3>
+        <div>
+          <ul className='inline-item'>
+            <li className="list">Mumbai</li>
+            <li className="list">Bangalore</li>
+            <li className="list">Pune</li>
+            <li className="list">Delhi</li>
+          </ul>
+        </div>
+      </div>
+      <div className="container">
+        <div className="grid">
+
+        </div>
+
+        
+
+      </div>
 
 
 
