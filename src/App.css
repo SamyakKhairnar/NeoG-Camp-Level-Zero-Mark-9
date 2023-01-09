@@ -143,17 +143,17 @@ p{
   }
   .inline-item{
     display: inline;
-    column-gap: 1rem;
   }
   .list{
     font-size: larger;
     width: auto;
     box-shadow: none;
+    padding: 1rem 1.2rem;
   }
 
   .card{
-    height: 30%;
-    width: 45%;
+    height: auto;
+    width: 80%;
   }
   .cardImage{
     height: fit-content;
