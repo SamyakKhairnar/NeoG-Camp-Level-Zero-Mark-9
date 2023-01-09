@@ -100,8 +100,8 @@ function App() {
   return (
     <div className="App">
       <div className="header">
-        <h1>Best Restaurants in India</h1>
-        <h3>"An React Application"</h3>
+        <h1 className='title'>Best Restaurants in India</h1>
+        <h3 className='titleCap'>"An React Application"</h3>
         <div className="inline-item">
           {cityList.map((city)=>{
             return <button className="list" onClick={()=>cityHandler(city)}>{city}</button>

@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Allura&family=Bree+Serif&family=Dancing+Script:wght@500&family=Pacifico&family=Poppins:ital,wght@1,600&display=swap');
+body{
+  background-image: linear-gradient(to left bottom, #e9ebe3, #dfeada, #d1e9d5, #bee9d4, #a8e9d9, #8cd8d2, #73c6cc, #5cb4c5, #458fa8, #336b88, #254967, #172a45);
+}
 h1{
   margin-top: 5px;
   font-family: 'Bree Serif', serif;
@@ -124,4 +127,48 @@ p{
 }
 .links .fa-brands:hover {
   color: #06b6d4;
+}
+
+@media only screen and (max-width: 600px){
+  body{
+    background-image: linear-gradient(to right top, #00fbff, #04f9ff, #09f8ff, #0ef6ff, #13f4ff);
+  }
+  h1{
+    margin: auto;
+    font-size: xx-large;
+  }
+  h3{
+    margin: auto;
+    font-size: larger;
+  }
+  .inline-item{
+    display: inline;
+    column-gap: 1rem;
+  }
+  .list{
+    font-size: larger;
+    width: auto;
+    box-shadow: none;
+  }
+
+  .card{
+    height: 30%;
+    width: 45%;
+  }
+  .cardImage{
+    height: fit-content;
+    width: 90%;
+  }
+  h2{
+    font-size: x-large;
+  }
+  p{
+    font-size: large;
+  }
+
+  .footer{
+    position: relative;
+    background-color: #000000;
+    opacity: 0.6;
+  }
 }
