@@ -139,7 +139,7 @@ p{
   }
   h3{
     margin: auto;
-    font-size: larger;
+    font-size: medium;
   }
   .inline-item{
     display: inline;
@@ -153,17 +153,18 @@ p{
 
   .card{
     height: auto;
-    width: 80%;
+    width: 45%;
+    margin: 5px;
   }
   .cardImage{
-    height: fit-content;
-    width: 90%;
+    height: auto;
+    width: 100%;
   }
   h2{
-    font-size: x-large;
+    font-size: larger;
   }
   p{
-    font-size: large;
+    font-size: medium;
   }
 
   .footer{
